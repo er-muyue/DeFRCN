@@ -36,34 +36,3 @@ class AffineLayer(nn.Module):
 
 def decouple_layer(x, _lambda):
     return GradientDecoupleLayer.apply(x, _lambda)
-
-
-# class AffineLayerV2(nn.Module):
-#     def __init__(self, num_channels, bias=False):
-#         super(AffineLayerV2, self).__init__()
-#         self.weight = nn.Parameter(
-#             torch.FloatTensor(1, num_channels, 1, 1).fill_(1), requires_grad=True)
-#
-#         self.bias = None
-#         if bias:
-#             self.bias = nn.Parameter(
-#                 torch.FloatTensor(1, num_channels, 1, 1).fill_(0), requires_grad=True)
-#
-#     def forward(self, X):
-#         out = X * self.weight.expand_as(X)
-#         if self.bias is not None:
-#             out = out + self.bias.expand_as(X)
-#         return out
-#
-#
-# class GradientDecoupleLayerV2(Function):
-#
-#     @staticmethod
-#     def forward(ctx, x, affine_layer, _lambda):
-#         ctx._lambda = _lambda
-#         return affine_layer(x)
-#
-#     @staticmethod
-#     def backward(ctx, grad_output):
-#         grad_output = grad_output * ctx._lambda
-#         return grad_output, None
