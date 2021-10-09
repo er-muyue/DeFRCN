@@ -2,8 +2,8 @@
 
 EXPNAME=$1
 SAVEDIR=checkpoints/coco/${EXPNAME}
-IMAGENET_PRETRAIN=/data/.pretrain_weights/ImageNetPretrained/MSRA/R-101.pkl
-IMAGENET_PRETRAIN_TORCH=/data/.pretrain_weights/ImageNetPretrained/torchvision/resnet101-5d3b4d8f.pth
+IMAGENET_PRETRAIN=/data/.pretrain_weights/ImageNetPretrained/MSRA/R-101.pkl                            # <-- change it to you path
+IMAGENET_PRETRAIN_TORCH=/data/.pretrain_weights/ImageNetPretrained/torchvision/resnet101-5d3b4d8f.pth  # <-- change it to you path
 
 
 # ------------------------------- Base Pre-train ---------------------------------- #
@@ -39,7 +39,7 @@ do
         done
     done
 done
-python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_fsod_r101_novel/fsrw-like --shot-list 1 2 3 5 10 30
+python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_fsod_r101_novel/fsrw-like --shot-list 1 2 3 5 10 30  # surmarize all results
 
 
 # ----------------------------- Model Preparation --------------------------------- #
@@ -66,7 +66,7 @@ do
         rm ${OUTPUT_DIR}/model_final.pth
     done
 done
-python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_gfsod_r101_novel/tfa-like --shot-list 1 2 3 5 10 30
+python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_gfsod_r101_novel/tfa-like --shot-list 1 2 3 5 10 30  # surmarize all results
 
 
 # ------------------------------ Novel Fine-tuning ------------------------------- #  not necessary, just for the completeness of defrcn
@@ -87,4 +87,4 @@ do
         rm ${OUTPUT_DIR}/model_final.pth
     done
 done
-python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_fsod_r101_novel/tfa-like --shot-list 1 2 3 5 10 30
+python3 tools/extract_results.py --res-dir ${SAVEDIR}/defrcn_fsod_r101_novel/tfa-like --shot-list 1 2 3 5 10 30  # surmarize all results
