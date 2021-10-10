@@ -159,10 +159,11 @@ This repo is developed based on [TFA](https://github.com/Megvii-BaseDetection/cv
 ## Citing
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
 ```
-@article{qiao2021defrcn,
+@inproceedings{qiao2021defrcn,
   title={DeFRCN: Decoupled Faster R-CNN for Few-Shot Object Detection},
   author={Qiao, Limeng and Zhao, Yuxuan and Li, Zhiyuan and Qiu, Xi and Wu, Jianan and Zhang, Chi},
-  journal={arXiv preprint arXiv:2108.09017},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={8681--8690},
   year={2021}
 }
 ```
