@@ -154,7 +154,7 @@ For ease of training and evaluation over multiple runs, we integrate the whole p
 * If you have any problem of above results in this repo, you can download *configs and logs* from [GoogleDrive](https://drive.google.com/file/d/1Ff5jP4PCDDPQ7lzsageZsauFWer73QIl/view?usp=sharing), [BaiduYun](https://pan.baidu.com/s/1FQq_2EgqlmzFv8cANOFYmA).
 
 ## Acknowledgement
-This repo is developed based on [TFA](https://github.com/Megvii-BaseDetection/cvpods) and [Detectron2](https://github.com/facebookresearch/detectron2). Please check them for more details and features.
+This repo is developed based on [TFA](https://github.com/ucbdrive/few-shot-object-detection) and [Detectron2](https://github.com/facebookresearch/detectron2). Please check them for more details and features.
 
 ## Citing
 If you use this work in your research or wish to refer to the baseline results published here, please use the following BibTeX entries:
